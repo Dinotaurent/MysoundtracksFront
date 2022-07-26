@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Artista } from './artista';
+import { ArtistaService } from './artista.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-artista',
@@ -6,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArtistaComponent implements OnInit {
 
-  constructor() { }
+  artistas: Artista[] = [];
+
+  constructor(private artistaService: ArtistaService) { }
 
   ngOnInit(): void {
   }

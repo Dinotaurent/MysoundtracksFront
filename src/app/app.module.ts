@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { IndexComponent } from './index/index.component';
 import { ArtistaComponent } from './artista/artista.component';
+import { FormComponent } from './artista/form.component';
 // import { RouterModule,Routes } from '@angular/router';
 
 
@@ -21,7 +22,8 @@ import { ArtistaComponent } from './artista/artista.component';
     NavbarComponent,
     FooterComponent,
     IndexComponent,
-    ArtistaComponent
+    ArtistaComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
