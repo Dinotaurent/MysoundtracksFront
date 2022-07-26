@@ -32,6 +32,10 @@ nav {
   background-image: linear-gradient(135deg, #280693, #261961);
 }
 
+.nav2 {
+  padding: 16px;
+}
+
 .logo {
   border-radius: 80px;
 }
@@ -67,6 +71,20 @@ nav {
   cursor: pointer;
 }
 
+.cardArtista {
+  /* background-color: #8378A4; */
+  background-image: linear-gradient(135deg, #8378A4, #4421DF);
+  border-radius: 400px;
+  box-shadow: 0 0 30px rgba(0,0,0,0,18);
+  cursor: pointer;
+}
+
+.cardArtista:hover {
+  transform: translateY(-2.0%);
+  box-shadow: 0 4rem 8rem #30CD3F;
+  background-image: linear-gradient(135deg, #4421DF, #8378A4);
+}
+
 .card:hover {
   transform: translateY(-2.0%);
   box-shadow: 0 4rem 8rem #02C6F7;
@@ -77,11 +95,22 @@ nav {
   clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
 }
 
+.containerArtista {
+  position: relative;
+  /* clip-path: polygon(0 0,100% 0,100% 85%,0 100%); */
+}
+
 .imgIndex {
   width: 100%;
   display: block;
   border-radius: 20px 20px 0 0;
  }
+
+ .imgArtista {
+   width: 100%;
+   display: block;
+   border-radius: 180px 180px 80px 80px;
+  }
 
  .container:after {
    content: "";
@@ -108,6 +137,11 @@ nav {
    background-image: linear-gradient(135deg, #F50CBD, #F50C17);
  }
 
+ .cardArtista>.container:after {
+   /* background-image: linear-gradient(135deg, #B0D896, #30CD3F); */
+   background-image: linear-gradient(135deg, #F50CBD, #F50C17);
+ }
+
  .details {
    padding: 20px 10px;
  }
@@ -117,3 +151,15 @@ nav {
    text-shadow: 0 0 3px black, 0 0 5px black;
    margin: 10px 0 15px 0;
  }
+
+ .btn-success {
+   /* background-color: #99E58D; */
+   background-color: #AFF150;
+   color: black;
+   padding: 1px 8px 10px 8px;
+   border-radius: 16px;
+ }
+
+.ion-md-person-add {
+  font-size: 24px;
+}
