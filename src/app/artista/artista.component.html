@@ -4,61 +4,21 @@
 
 <div class="cards">
 
-<div class="cardArtista" routerLink="/artistas">
+<div class="cardArtista" *ngFor="let item of artistas">
   <div class="containerArtista">
-<img src="assets/imagenes/MySoundtracksImagenes/imagen.jpg" class="imgArtista">
+<img [src]="item.imagen" class="imgArtista">
   </div>
-  <div class="details">
-<h1>Artistas</h1>
+  <div class="detailsArtista">
+<h3>{{ item.nombre }}</h3>
+
+<div>
+<a routerLink="/artistas/form" class="btn btn-primary m-2">Ver  <i class="icon ion-md-eye"></i></a>
+<button type="button" name="button"  [routerLink]="['/artistas/form', item.id]" class="btn btn-warning m-2">Editar <i class="icon ion-md-create"></i></button>
+<button type="submit" class="btn btn-danger" (click)="eliminar(item)">Eliminar <i class="icon ion-md-trash"></i></button>
+</div>
+
   </div>
   </div>
-
-  <div class="cardArtista" routerLink="/artistas">
-    <div class="containerArtista">
-  <img src="assets/imagenes/MySoundtracksImagenes/imagen.jpg" class="imgArtista">
-    </div>
-    <div class="details">
-  <h1>Artistas</h1>
-    </div>
-    </div>
-
-    <div class="cardArtista" routerLink="/artistas">
-      <div class="containerArtista">
-    <img src="assets/imagenes/MySoundtracksImagenes/imagen.jpg" class="imgArtista">
-      </div>
-      <div class="details">
-    <h1>Artistas</h1>
-      </div>
-      </div>
-
-      <div class="cardArtista" routerLink="/artistas">
-        <div class="containerArtista">
-      <img src="assets/imagenes/MySoundtracksImagenes/imagen.jpg" class="imgArtista">
-        </div>
-        <div class="details">
-      <h1>Artistas</h1>
-        </div>
-        </div>
-
-
-        <div class="cardArtista" routerLink="/artistas">
-          <div class="containerArtista">
-        <img src="assets/imagenes/MySoundtracksImagenes/imagen.jpg" class="imgArtista">
-          </div>
-          <div class="details">
-        <h1>Artistas</h1>
-          </div>
-          </div>
-
-          <div class="cardArtista" routerLink="/artistas">
-            <div class="containerArtista">
-          <img src="assets/imagenes/MySoundtracksImagenes/imagen.jpg" class="imgArtista">
-            </div>
-            <div class="details">
-          <h1>Artistas</h1>
-            </div>
-            </div>
-
 
 
 

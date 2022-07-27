@@ -77,12 +77,16 @@ nav {
   border-radius: 400px;
   box-shadow: 0 0 30px rgba(0,0,0,0,18);
   cursor: pointer;
+  height: 240px;
+  transition: 0.3s ease-in-out;
 }
 
 .cardArtista:hover {
   transform: translateY(-2.0%);
   box-shadow: 0 4rem 8rem #30CD3F;
   background-image: linear-gradient(135deg, #4421DF, #8378A4);
+  border-radius: 80px;
+  height: 380px;
 }
 
 .card:hover {
@@ -96,8 +100,12 @@ nav {
 }
 
 .containerArtista {
-  position: relative;
+  position: relative
   /* clip-path: polygon(0 0,100% 0,100% 85%,0 100%); */
+}
+
+.containerArtista:hover {
+  height: 240px;
 }
 
 .imgIndex {
@@ -107,9 +115,19 @@ nav {
  }
 
  .imgArtista {
-   width: 100%;
-   display: block;
-   border-radius: 180px 180px 80px 80px;
+   width: 340px;
+   height: 200px;
+   /* display: block; */
+   border-radius: 50%;
+   transition: 0.3s ease-in-out;
+  }
+
+  .cardArtista:hover .imgArtista {
+    /* display: block; */
+    width: 435px;
+    height: 244px;
+    transition: 0.3s ease-in-out;
+    border-radius: 80px;
   }
 
  .container:after {
@@ -146,10 +164,25 @@ nav {
    padding: 20px 10px;
  }
 
+ .detailsArtista {
+   padding: 20px 10px;
+   transition: 0.1s ease-in-out;
+   visibility: hidden;
+ }
+
+.cardArtista:hover .detailsArtista {
+   visibility: visible;
+   transition-delay: 0.3s;
+ }
+
  .details>h1 {
    color: #E2D09C;
    text-shadow: 0 0 3px black, 0 0 5px black;
    margin: 10px 0 15px 0;
+ }
+
+ .detailsArtista>h3 {
+   color: #E2D09C;
  }
 
  .btn-success {
@@ -158,6 +191,21 @@ nav {
    color: black;
    padding: 1px 8px 10px 8px;
    border-radius: 16px;
+ }
+
+ .btn-primary {
+   background-color: #4CCCEF;
+   color: black;
+ }
+
+ .btn-warning {
+   background-color: #FFAE00;
+   color: black;
+ }
+
+ .btn-danger {
+   background-color: #FF005D;
+   color: black;
  }
 
 .ion-md-person-add {

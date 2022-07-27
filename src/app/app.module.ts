@@ -8,6 +8,8 @@ import { FooterComponent } from './footer/footer.component';
 import { IndexComponent } from './index/index.component';
 import { ArtistaComponent } from './artista/artista.component';
 import { FormComponent } from './artista/form.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 // import { RouterModule,Routes } from '@angular/router';
 
 
@@ -28,6 +30,8 @@ import { FormComponent } from './artista/form.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
     // RouterModule.forRoot(routes)
   ],
   providers: [],
