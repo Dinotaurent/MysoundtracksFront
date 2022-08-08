@@ -1,18 +1,28 @@
-<div >
+<a routerLink="/artistas" class="btn btn-secondary m-2">Regresar</a>
+
+<div class="titulo">
+<h1 *ngIf="!artista.id else elseBlock2">Registrar nuevo</h1>
+<ng-template #elseBlock2>
+<h1>{{artista.nombre}}</h1>
+</ng-template>
+</div>
+
+<div class="containerForm">
   <form>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    <label class="form-label"><h3>Nombre</h3></label>
+    <input type="text" class="form-control" [(ngModel)]="artista.nombre" name="nombre">
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+    <label class="form-label"><h3>Imagen</h3></label>
+    <input class="form-control" type="file" (change)="subirImg($event)" name="imagen">
+    <input class="myInput">
   </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-success" (click)="registrar()" *ngIf="!artista.id else elseBlock">Registrar</button>
+
+<ng-template #elseBlock>
+<button type="submit" class="btn btn-warning" (click)="actualizar()">Actualizar</button>
+</ng-template>
+
 </form>
 </div>

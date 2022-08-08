@@ -8,7 +8,8 @@ import { of,Observable } from 'rxjs';
 })
 export class ArtistaService {
 
-  private URL:string = "http://localhost:8080/artistas";
+  private CARPETA_IMG = 'img';
+  private URL:string = 'http://localhost:8080/artistas';
   private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
 
   constructor(private http: HttpClient) { }
@@ -34,4 +35,9 @@ export class ArtistaService {
   }
 
 
+
+
+}
+function uploadBytes(filePath: string, file: any) {
+  throw new Error('Function not implemented.');
 }
