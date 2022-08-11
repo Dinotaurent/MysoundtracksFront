@@ -11,12 +11,15 @@
   <form>
   <div class="mb-3">
     <label class="form-label"><h3>Nombre</h3></label>
-    <input type="text" class="form-control" [(ngModel)]="artista.nombre" name="nombre">
+    <input type="text" class="form-control" [(ngModel)]="artista.nombre" name="nombre" required>
   </div>
   <div class="mb-3">
     <label class="form-label"><h3>Imagen</h3></label>
-    <input class="form-control" type="file" (change)="subirImg($event)" name="imagen">
-    <input class="myInput">
+    <input class="form-control" type="file" (change)="subirImg($event)" name="imagenfile">
+
+  </div>
+  <div class="mb-3">
+    <input type="text" [(ngModel)]="artista.imagen" name="imagen" value="{{urlImg}}">
   </div>
   <button type="submit" class="btn btn-success" (click)="registrar()" *ngIf="!artista.id else elseBlock">Registrar</button>
 

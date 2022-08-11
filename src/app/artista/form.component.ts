@@ -49,12 +49,13 @@ export class FormComponent implements OnInit {
       )
     }
 
+    // public guardarUrl(url: string): void {
+    //   this.urlImg = url;
+    // }
+
     async subirImg(event: any){
       const file = event.target.files[0];
       const storage = getStorage();
-      // // console.log(file);
-      //
-      //
 
       const filePath = `imagenes/${file.name}`;
       const imgRef = ref(storage,filePath);
@@ -66,13 +67,17 @@ export class FormComponent implements OnInit {
 
 await delay(8000);
 getDownloadURL(imgRef).then(
-  response => console.log(response)
+  response => {
+    this.urlImg = response;
+    // this.guardarUrl(response)
+    console.log(this.urlImg);
+  }
 ).catch(
   error => console.log(error)
 );
 
 // this.urlImg = getDownloadURL(imgRef);
-console.log(this.urlImg);
+
 // return await getDownloadURL(imgRef);
 
       // const url = getDownloadURL(imgRef)
